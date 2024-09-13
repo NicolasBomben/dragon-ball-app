@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { getCharacters } from "../helpers/getCharacters";
 import { CardCharacter } from "../components/CardCharacter";
 
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 export const Characters = () => {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
@@ -42,6 +44,7 @@ export const Characters = () => {
           className="bg-[#34aee3] inline-flex items-center justify-center rounded-md text-lg font-medium  transition-colors focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
           
         >
+          <ChevronLeft className="h-4 w-4 mr-2"/>
           Previous
         </button>
         <span className="text-sm text-muted-foreground">
@@ -54,6 +57,7 @@ export const Characters = () => {
           
         >
           Next
+          <ChevronRight className="h-4 w-4 ml-2"/>
         </button>
       </div>
       <div className="container px-4 py-8">
